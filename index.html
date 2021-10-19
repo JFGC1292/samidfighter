@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Samid Fighter</title>
+    <link rel="stylesheet" href="assets/styles/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <script src="assets/scripts/jquery-3.6.0.min.js"></script>
+    <script src="assets/scripts/vendor.js" defer></script>
+    <script src="assets/scripts/app.js" defer></script>
+  </head>
+
+  <body>
+
+    <main>
+
+      <!-- Música de fondo -->
+      <audio autoplay loop>
+        <source src="./resources/samidTheme.wav" type="audio/wav">
+        Tu navegador no soporta música.
+      </audio>
+
+      <!-- Selección de personaje -->
+      <div id="characterSelectionScreen">
+        <h1>Samid Fighter</h1>
+        <h2>Elige tu personaje</h2>
+        <div id="characterContainer">
+          <div>
+            <img id="vialeImg" src="./resources/viale.jpg" alt="Mauro Viale" />
+            <button id="vialeChosenBtn" class="primaryButton">Mauro Viale</button>
+          </div>
+          <div>
+            <img id="samidImg" src="./resources/samid.jpg" alt="Alberto Samid" />
+            <button id="samidChosenBtn" class="primaryButton">Alberto Samid</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Pantalla de combate -->
+      <div id="battleScreen">
+        <div id="computerInfo">
+          <div id="computerData">
+          <h3 id="computerName"></h3>
+          <h4>Level 100</h4>
+          <progress id="computerLife" max="100" value="100"></progress>
+        </div>   
+          <img id="computerImg" src="" alt="" />
+        </div>
+        <div id="playerInfo">
+          <img id="playerImg" src="" alt="" />
+          <div id="playerData">
+            <h3 id="playerName"></h3>
+            <h4>Level 100</h4>
+            <progress id="playerLife" max="100" value="100"></progress>
+          </div>
+        </div>
+        <div id="battleLog">
+          <p id="battleLogParagraph"></p>
+          <div id="buttonScreen"></div>
+        </div>
+      </div>
+
+      <!-- Final del juego -->
+      <div id="endGameScreen">
+        <img src="" alt=""/>
+        <h1></h1>
+        <button id="endGameBtn" class="primaryButton">Reiniciar juego</button>
+        <div id="historyContainer">
+          <p id="samidHistory"></p>
+          <p id="vialeHistory"></p>
+        </div>
+      </div>
+
+    </main>
+
+  </body>
+
+</html>
