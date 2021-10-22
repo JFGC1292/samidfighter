@@ -20,13 +20,7 @@ musicBtn.click(() => {
         musicBtn.html("🔈");
         audioDiv.html("");
     }
-})
-
-vialeChosenBtn.hover(() => {
-    $("#vialeImg").addClass("buttonOnHover");
-}, () => {
-    $("#vialeImg").removeClass("buttonOnHover");
-})
+});
 
 vialeChosenBtn.click(() => {
     selectedChar = "viale";
@@ -34,11 +28,14 @@ vialeChosenBtn.click(() => {
     buildBattleScreen();
 });
 
-samidChosenBtn.hover(() => {
-    $("#samidImg").addClass("buttonOnHover");
-}, () => {
-    $("#samidImg").removeClass("buttonOnHover");
+vialeChosenBtn.hover(() => {
+    vialeImg.addClass("borderAnim");
+});
+
+vialeChosenBtn.mouseout(() => {
+    vialeImg.removeClass("borderAnim");
 })
+
 
 samidChosenBtn.click(() => {
     selectedChar = "samid";
@@ -46,29 +43,37 @@ samidChosenBtn.click(() => {
     buildBattleScreen();
 });
 
+samidChosenBtn.hover(() => {
+    samidImg.addClass("borderAnim");
+});
+
+samidChosenBtn.mouseout(() => {
+    samidImg.removeClass("borderAnim");
+})
+
 function getComputerLife() {
     return computerLife.prop("value");
-}
+};
 
 function getPlayerLife() {
     return playerLife.prop("value");
-}
+};
 
 function toggleButtons(display) {
     $("button").each((index, element) => {
         if (element.id !== "endGameBtn") {
             element.style.display = display;
-        }
-    })
-}
+        };
+    });
+};
 
 function resetButtons() {
     $("button").each((index, element) => {
         if (element.id === "amarillismoBtn" || element.id === "acusacionBtn" || element.id === "evasionBtn" || element.id === "trompadaBtn") {
             element.remove();
         };
-    })
-}
+    });
+};
 
 function endGame() {
     let actualPlayerLife = getPlayerLife();
@@ -82,14 +87,14 @@ function endGame() {
             winner = selectedChar;
         } else {
             winner = computerChar;
-        }
+        };
         $("#endGameScreen h1").html(`¡El ganador es ${winner[0].toUpperCase() + winner.slice(1)}!`);
         $("#endGameScreen img").attr("src", `./resources/${winner}.jpg`)
         if (winner === "viale") {
             history.viale++;
         } else {
             history.samid++;
-        }
+        };
         window.localStorage.setItem("history", JSON.stringify(history));
         $("#samidHistory").html(`Samid ganó ${history.samid} veces`);
         $("#vialeHistory").html(`Viale ganó ${history.viale} veces`);

@@ -16,17 +16,26 @@
   box-shadow: 2px 5px 15px rgba(0,0,0,1);
 }
 
-
-.buttonOnHover {
-  border: 0.5rem solid orange;
-  transform: scale(1.2);
-}
-
 /* Selección de personaje */
+
 #vialeImg,
 #samidImg {
-  transition: all 150ms ease-in-out;
+  padding: 0.3rem;
+  border: 0.3rem solid rgba(0,0,0,0);
 }
+
+.borderAnim {
+  animation-name: borderAnim;
+  animation-duration: 1.2s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes borderAnim {
+  0%, 100% {border: 0.3rem solid rgba(0,0,0,0)}
+  50%  {border: 0.3rem solid rgb(115, 255, 0)}
+  75%  {border: 0.3rem solid rgb(245, 241, 1)}
+}
+
 
 #characterSelectionScreen {
   display: flex;

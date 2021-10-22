@@ -52,3 +52,6 @@ const endGameBtn = $("#endGameBtn");
 
 const musicBtn = $("#musicBtn");
 const audioDiv = $("#audioDiv");
+
+const vialeImg = $("#vialeImg");
+const samidImg = $("#samidImg");
