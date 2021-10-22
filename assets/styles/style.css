@@ -84,12 +84,13 @@
 }
 
 #musicBtn {
-  padding: 1rem 1rem;
+  padding: 0.5rem 0.5rem;
   margin: 0.5rem 0.5rem;
   border-radius: 0.5rem;
   cursor: pointer;
   background: rgb(212, 212, 212);
   width: 5rem;
+  font-size: large;
 }
 
 /* Pantalla de combate */
