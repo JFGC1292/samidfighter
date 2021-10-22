@@ -49,3 +49,6 @@ const battleLogParagraph = $("#battleLogParagraph");
 const battleLog = $("#battleLog");
 
 const endGameBtn = $("#endGameBtn");
+
+const musicBtn = $("#musicBtn");
+const audioDiv = $("#audioDiv");

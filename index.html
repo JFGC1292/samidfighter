@@ -19,12 +19,7 @@
 
     <main>
 
-      <!-- Música de fondo -->
-      <audio autoplay loop>
-        <source src="./resources/samidTheme.wav" type="audio/wav">
-        Tu navegador no soporta música.
-      </audio>
-
+      
       <!-- Selección de personaje -->
       <div id="characterSelectionScreen">
         <h1>Samid Fighter</h1>
@@ -39,8 +34,13 @@
             <button id="samidChosenBtn" class="primaryButton">Alberto Samid</button>
           </div>
         </div>
+        <!-- Música de fondo -->
+        <p>Música</p>
+        <button id="musicBtn">🔈</button>
+        <audio id="audioDiv"></audio>
       </div>
-
+      
+      
       <!-- Pantalla de combate -->
       <div id="battleScreen">
         <div id="computerInfo">

@@ -16,10 +16,6 @@
   box-shadow: 2px 5px 15px rgba(0,0,0,1);
 }
 
-#vialeImg,
-#samidImg {
-  transition: all 150ms ease-in-out;
-}
 
 .buttonOnHover {
   border: 0.5rem solid orange;
@@ -27,6 +23,10 @@
 }
 
 /* Selección de personaje */
+#vialeImg,
+#samidImg {
+  transition: all 150ms ease-in-out;
+}
 
 #characterSelectionScreen {
   display: flex;
@@ -77,6 +77,19 @@
 #vialeChosenBtn,
 #samidChosenBtn {
   padding: 1rem;
+}
+
+#characterSelectionScreen p {
+  color: white;
+}
+
+#musicBtn {
+  padding: 1rem 1rem;
+  margin: 0.5rem 0.5rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  background: rgb(212, 212, 212);
+  width: 5rem;
 }
 
 /* Pantalla de combate */
