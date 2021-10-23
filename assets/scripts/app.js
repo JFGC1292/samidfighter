@@ -133,16 +133,16 @@ buildBattleScreen = () => {
 
     if (selectedChar === "viale") {
         playerName.html(viale.nombre);
-        playerImg.attr("src", "./resources/viale.jpg");
+        playerImg.attr("src", "./resources/vialePlayer.png");
         computerName.html(samid.nombre);
-        computerImg.attr("src", "./resources/samid.jpg");
+        computerImg.attr("src", "./resources/samidComputer.png");
         battleLog.append("<button id='amarillismoBtn' class='primaryButton'>Amarillismo</button>")
         battleLog.append("<button id='acusacionBtn' class='primaryButton'>Acusación grave</button>")
     } else {
         playerName.html(samid.nombre);
-        playerImg.attr("src", "./resources/samid.jpg");
+        playerImg.attr("src", "./resources/samidPlayer.png");
         computerName.html(viale.nombre);
-        computerImg.attr("src", "./resources/viale.jpg");
+        computerImg.attr("src", "./resources/vialeComputer.png");
         battleLog.append("<button id='evasionBtn' class='primaryButton'>Evasión</button>")
         battleLog.append("<button id='trompadaBtn' class='primaryButton'>Trompada</button>")
     }
