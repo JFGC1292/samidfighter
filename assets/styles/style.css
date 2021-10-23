@@ -102,6 +102,13 @@
   font-size: large;
 }
 
+@media (max-width: 1240px) {
+  #characterSelectionScreen {
+    background-image: none;
+    background-color: #009bbe;
+  }
+}
+
 /* Pantalla de combate */
 #battleScreen {
   display: none;
@@ -195,6 +202,35 @@ progress::-webkit-progress-bar {
   margin: 1rem;
 }
 
+@media (max-width: 1200px) {
+  #battleLog Button {
+    font-size: x-small;
+  }
+}
+
+@media (max-width: 760px) {
+  #battleLog Button {
+    font-size: small;
+    width: 100%;
+  }
+
+  #battleLogParagraph {
+    font-size: smaller;
+    width: 100%;
+  }
+}
+
+@media (max-width: 760px) {
+  #battleLog Button {
+    font-size: 0.5rem;
+  }
+
+  #battleLogParagraph {
+    font-size: smaller;
+    width: 100%;
+  }
+}
+
 /* Final del juego */
 #endGameScreen {
   display: none;
@@ -213,6 +249,7 @@ progress::-webkit-progress-bar {
 #endGameScreen h1 {
   color: white;
   text-shadow: 0 0 2px rgba(0,0,0,1);
+  text-align: center;
 }
 
 #endGameScreen button {
