@@ -59,6 +59,30 @@ function getPlayerLife() {
     return playerLife.prop("value");
 };
 
+function amarillismo() {
+    let audio = new Audio("./resources/amarillismoSfx.mp3");
+    audio.play();
+    return Math.floor(Math.random() * 40) + 1;
+}
+
+function acusacion() {
+    let audio = new Audio("./resources/acusacionSfx.mp3");
+    audio.play();
+    return Math.floor(Math.random() * 25) + 1;
+}
+
+function evasion() {
+    let audio = new Audio("./resources/evasionSfx.mp3");
+    audio.play();
+    return Math.floor(Math.random() * 25) + 1;
+}
+
+function trompada() {
+    let audio = new Audio("./resources/trompadaSfx.mp3");
+    audio.play();
+    return Math.floor(Math.random() * 40) + 1;
+}
+
 function toggleButtons(display) {
     $("button").each((index, element) => {
         if (element.id !== "endGameBtn") {
@@ -196,3 +220,10 @@ endGameBtn.click(() => {
     playerLife.attr("value", 100);
     resetButtons();
 })
+
+$.ajax("https://api.giphy.com/v1/gifs/random?api_key=odgZNNhzcrYU08eLZyT3aN8bFDSovHsk&tag=champion&rating=pg-13")
+    .done((res) => {
+        const embedUrl = res.data.embed_url;
+        $("#randomGif").attr("src", embedUrl);
+    })
+    .fail((error) => (console.log(error.responseJSON.message)));

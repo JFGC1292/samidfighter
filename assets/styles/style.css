@@ -1,6 +1,6 @@
 * {
-  padding: 0;
   margin: 0;
+  padding: 0;
   box-sizing: border-box;
   font-family: 'Press Start 2P', cursive;
 }
@@ -52,6 +52,7 @@
 
 #characterSelectionScreen h1,
 #characterSelectionScreen h2 {
+  margin-top: 2rem;
   margin-bottom: 2.5rem;
   color: white;
   text-shadow: 0 0 2px rgba(0,0,0,1);
@@ -112,9 +113,8 @@
 /* Pantalla de combate */
 #battleScreen {
   display: none;
-  padding: 2rem;
   width: 100%;
-  height: 100vh;
+  padding: 1rem;
 }
 
 #computerInfo {
@@ -184,6 +184,7 @@ progress::-webkit-progress-bar {
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-around;
+  align-items: center;
   width: 100%;
   height: 5rem;
   padding: 2rem;
@@ -194,7 +195,6 @@ progress::-webkit-progress-bar {
   border-right: 1.5rem solid #c54a2c;
   border-left: 1.5rem solid #c54a2c;
   border-radius: 1rem;
-  align-items: center;
 }
 
 #battleLog button {
@@ -240,10 +240,12 @@ progress::-webkit-progress-bar {
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
+  padding: 5rem;
 }
 
 #endGameScreen img {
   margin-bottom: 2rem;
+  height: 200px;
 }
 
 #endGameScreen h1 {
@@ -267,6 +269,10 @@ progress::-webkit-progress-bar {
 
 #historyContainer p {
   line-height: 2rem;
+}
+
+#randomGif {
+  margin-bottom: 2rem;
 }
 
 

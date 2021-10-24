@@ -12,31 +12,6 @@ class Personaje {
 const samid = new Personaje("Samid", ["Usted se tiene que arrepentir de lo que dijo", "¿Usted cómo se llama?"]);
 const viale = new Personaje("Viale", ["Usted avaló la bomba", "Pague sus impuestos"]);
 
-function amarillismo() {
-    let audio = new Audio("./resources/amarillismoSfx.mp3");
-    audio.play();
-    return Math.floor(Math.random() * 40) + 1;
-}
-
-function acusacion() {
-    let audio = new Audio("./resources/acusacionSfx.mp3");
-    audio.play();
-    return Math.floor(Math.random() * 25) + 1;
-}
-
-function evasion() {
-    let audio = new Audio("./resources/evasionSfx.mp3");
-    audio.play();
-    return Math.floor(Math.random() * 25) + 1;
-}
-
-function trompada() {
-    let audio = new Audio("./resources/trompadaSfx.mp3");
-    audio.play();
-    return Math.floor(Math.random() * 40) + 1;
-}
-
-
 const characterSelectionScreen = $("#characterSelectionScreen");
 const battleScreen = $("#battleScreen");
 const endGameScreen = $("#endGameScreen");
