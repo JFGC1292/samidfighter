@@ -15,7 +15,7 @@ window.localStorage.setItem("history", JSON.stringify(history));
 musicBtn.click(() => {
     if (musicBtn.html() === "🔈") {
         musicBtn.html("🔊");
-        audioDiv.html("<audio autoplay loop><source src='./resources/samidTheme.wav' type='audio/wav'>Tu navegador no soporta música.</audio>")
+        audioDiv.html("<audio autoplay loop><source src='./resources/samidTheme.wav' type='audio/wav' id='backgroundMusic'>Tu navegador no soporta música.</audio>")
     } else {
         musicBtn.html("🔈");
         audioDiv.html("");
